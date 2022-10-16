@@ -30,7 +30,6 @@ app.get('/api/search', (req, res) => {
         longitude,
         offset
     };
-    console.log(searchRequest)
 
     client.search(searchRequest).then(response => {
         const body = response.jsonBody;
