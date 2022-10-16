@@ -41,7 +41,7 @@ function Reviews({rating}: Props) {
   }
 
   return (
-    <img src={imgSource} alt={`${rating} rating`} />
+    <img src={imgSource} className="select-none" alt={`${rating} rating`} />
   )
 }
 

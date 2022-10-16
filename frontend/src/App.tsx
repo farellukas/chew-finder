@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero coords={coords} setCoords={setCoords} />} />
           <Route path="/discover" element={<Discover term={term} setTerm={setTerm} coords={coords} setCoords={setCoords} />} />
-          <Route path="/results" element={<Results term={term} coords={coords} />} />
+          <Route path="/results" element={<Results term={term} coords={coords} setCoords={setCoords} />} />
         </Routes>
       </div>
     </Router>
