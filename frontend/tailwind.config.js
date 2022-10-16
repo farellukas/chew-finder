@@ -13,6 +13,9 @@ module.exports = {
         primarydarkest: '#F99602',
         accent: '#F8E187'
       },
+      aspectRatio: {
+        '3/2': '3 / 2',
+      },
       fontFamily: {
         sans: 'Montserrat'
       }

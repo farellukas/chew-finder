@@ -9,7 +9,7 @@ const yelp = require('yelp-fusion');
 const apiKey = process.env.API_KEY;
 
 const app = express();
-const port = 3000;
+const port = 5000;
 const client = yelp.client(apiKey)
 
 app.use(cors());
@@ -20,12 +20,17 @@ app.listen(port, () => {console.log(`listening on port ${port}`)});
 
 app.get('/api/search', (req, res) => {
     const term = req.query.term;
-    const location = req.query.location;
+    const latitude = req.query.latitude;
+    const longitude = req.query.longitude;
+    const offset = req.query.offset;
     
     const searchRequest = {
         term,
-        location
+        latitude,
+        longitude,
+        offset
     };
+    console.log(searchRequest)
 
     client.search(searchRequest).then(response => {
         const body = response.jsonBody;
