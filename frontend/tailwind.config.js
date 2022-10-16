@@ -10,7 +10,8 @@ module.exports = {
         primarylighter: '#DBC602',
         primary: '#F1C40F',
         primarydarker: '#DB9A02',
-        primarydarkest: '#F99602'
+        primarydarkest: '#F99602',
+        accent: '#F8E187'
       },
       fontFamily: {
         sans: 'Montserrat'
