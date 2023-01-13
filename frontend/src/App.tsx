@@ -16,7 +16,7 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <div className="bg-primary">
         <Routes>
-          <Route exact path="/" element={<Hero coords={coords} setCoords={setCoords} />} />
+          <Route path="/" element={<Hero coords={coords} setCoords={setCoords} />} />
           <Route path="/discover" element={<Discover term={term} setTerm={setTerm} coords={coords} setCoords={setCoords} />} />
           <Route path="/results" element={<Results term={term} coords={coords} setCoords={setCoords} />} />
         </Routes>
