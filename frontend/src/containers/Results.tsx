@@ -27,7 +27,9 @@ function Results({ term, coords, setCoords }: Props) {
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/api/search?term=${term}&latitude=${coords[0]}&longitude=${coords[1]}`
+      `https://chew-finder.up.railway.app/api/search?term=${term}&latitude=${
+        coords[0]
+      }&longitude=${coords[1]}&offset=${offset + 20}`
     )
       .then((response) => {
         return response.json();
@@ -36,7 +38,7 @@ function Results({ term, coords, setCoords }: Props) {
         setResults(json.businesses);
         setIsLoaded(true);
       });
-  }, [term, coords]);
+  }, [term, coords, offset]);
 
   // get user's location
   if (coords.length !== 2) {
