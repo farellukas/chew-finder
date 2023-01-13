@@ -13,7 +13,7 @@ function App() {
   const [coords, setCoords] = useState([])
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="bg-primary">
         <Routes>
           <Route path="/" element={<Hero coords={coords} setCoords={setCoords} />} />
