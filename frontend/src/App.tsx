@@ -13,7 +13,7 @@ function App() {
   const [coords, setCoords] = useState([])
 
   return (
-    <Router>
+    <Router basename="https://farellukas.github.io/chew-finder/">
       <div className="bg-primary">
         <Routes>
           <Route path="/" element={<Hero coords={coords} setCoords={setCoords} />} />
